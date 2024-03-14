@@ -54,30 +54,30 @@ const MusicController = ({ playThis }) => {
     // };
   }, []);
 
-  useEffect(() => {
-    setFavrate(
-      JSON.parse(localStorage.getItem("Favrate"))[0].song_id ===
-        playThis?.song_id
-    );
-  }, [playThis]);
+  // useEffect(() => {
+  //   setFavrate(
+  //     JSON.parse(localStorage.getItem("Favrate"))[0].song_id ===
+  //       playThis?.song_id
+  //   );
+  // }, [playThis]);
 
-  const addToFav = () => {
-    if (playThis) {
-      // let datageting = localStorage.getItem("Favrate");
-      // let data = JSON.parse(datageting);
-      let arrayData = [playThis];
-      let sending = JSON.stringify(arrayData);
-      localStorage.setItem("Favrate", sending);
-      setFavrate(
-        JSON.parse(localStorage.getItem("Favrate"))[0].song_id ===
-          playThis?.song_id
-      );
-      // console.log(arrayData);
-    }
-  };
-  console.log(
-    JSON.parse(localStorage.getItem("Favrate"))[0].song_id === playThis?.song_id
-  );
+  // const addToFav = () => {
+  //   if (playThis) {
+  //     // let datageting = localStorage.getItem("Favrate");
+  //     // let data = JSON.parse(datageting);
+  //     let arrayData = [playThis];
+  //     let sending = JSON.stringify(arrayData);
+  //     localStorage.setItem("Favrate", sending);
+  //     setFavrate(
+  //       JSON.parse(localStorage.getItem("Favrate"))[0].song_id ===
+  //         playThis?.song_id
+  //     );
+  //     // console.log(arrayData);
+  //   }
+  // };
+  // console.log(
+  //   JSON.parse(localStorage.getItem("Favrate"))[0].song_id === playThis?.song_id
+  // );
 
   return (
     <div className="controller-container">
